@@ -50,6 +50,16 @@
     .page { width: 279mm; height: 216mm; margin: 0; box-shadow: none; page-break-after: always; page-break-inside: avoid; overflow: hidden; }
     .page:last-child { page-break-after: auto; }
     .screen-only { display: none !important; }
+    /* Sept 8 & 9 grew the most rows after the live-schedule review — tighten just these two tables in print so nothing clips */
+    #day-8 .day-body, #day-9 .day-body { padding: 4px 30px 2px; }
+    #day-8 .ros-table thead th, #day-9 .ros-table thead th { padding: 2px 8px; }
+    #day-8 .ros-table tbody td, #day-9 .ros-table tbody td { padding: 0.2px 8px; }
+    #day-8 .rt-item, #day-9 .rt-item { font-size: 7.2px; line-height: 1.0; }
+    #day-8 .rt-item .rt-note, #day-9 .rt-item .rt-note { font-size: 6.5px; margin-top: 0; }
+    #day-8 .rt-time, #day-9 .rt-time { font-size: 7.6px; }
+    #day-8 .rt-owner, #day-9 .rt-owner { font-size: 6.7px; }
+    #day-8 .track-pill, #day-9 .track-pill { font-size: 5.8px; padding: 1.5px 3px; width: 82px; }
+    #day-9 .day-header { padding-top: 4px; padding-bottom: 4px; }
   }
 
   /* ── TOPBAR ───────────────────────────────────────────── */
@@ -696,14 +706,15 @@
             <div class="item-text"><strong>WiFi.</strong> Three named/passworded networks requested (public / streaming / BOH), ideally on the fastest available speed. Naming + speed-test process in progress with Verizon.</div>
           </div>
           <div class="item-row">
-            <div class="item-status"><span class="pill pending">Pending</span></div>
-            <div class="item-text"><strong>Late pickup — mannequin vendor.</strong> ~50 boxes / 2 truckloads (Frank Glover) can't be collected the night of the event. Next-morning pickup is expected to work; exact list and window still needed from Polar Black.</div>
+            <div class="item-status"><span class="pill progress">In Progress</span></div>
+            <div class="item-text"><strong>Late pickup — mannequin vendor.</strong> ~50 boxes / 2 truckloads (Frank Glover) can't be collected the night of the event. Polar Black's own live schedule now places this collection late Sept 9 (12–1am window) rather than Sept 10 morning, but still marks Frank Glover as TBC there — exact list, vendor and window still need confirming.</div>
           </div>
         </div>
         <div class="flag-box">
           <div class="fb-head">⚑ Schedule Flags to Confirm</div>
           <div class="fb-text">
-            <strong>Sept 9, 5:30pm</strong> — Polar Black's production schedule lists both a "Jenna Rehearsal" and a "Heron Soundcheck" at the same time. Please confirm whether this is intentional (two parallel activities) or a typo/conflict.<br/><br/>
+            <strong>Sept 8, 11:30am — second mannequin truck.</strong> Marked "to confirm" on Polar Black's own live production schedule. Please confirm this delivery is locked before load-in day.<br/><br/>
+            <strong>Sept 8 — Moe's team assignment.</strong> This deck originally listed Moe under Cocoon's 7:45am Casa Manager coverage. Polar Black's live schedule lists Moe as their own coordinator instead. Flagged for confirmation — see the Sept 8 page and Team &amp; Contacts.<br/><br/>
             <strong>Furniture removal / reset dates</strong> — confirmed directly in this ticket as September 7 (removal) and September 10 (reset). Treat these two dates as the standing plan.
           </div>
         </div>
@@ -828,7 +839,7 @@
           <td class="rt-time">7:45 AM</td>
           <td class="rt-track"><span class="track-pill cocoon">Cocoon</span></td>
           <td class="rt-item">Casa Manager on site ahead of client access; manages lift &amp; delivery access throughout load-in.</td>
-          <td class="rt-owner">Nafisa Skeie · Moe (Cocoon)</td>
+          <td class="rt-owner">Nafisa Skeie</td>
         </tr>
         <tr>
           <td class="rt-time">8:00 AM</td>
@@ -836,8 +847,14 @@
           <td class="rt-item">Access to venue — Polar Black team on site.</td>
           <td class="rt-owner">Polar Black</td>
         </tr>
-        <tr>
+        <tr class="row-highlight">
           <td class="rt-time">8:00 AM</td>
+          <td class="rt-track"><span class="track-pill pb">Polar Black</span></td>
+          <td class="rt-item">Moe manages lift &amp; delivery logistics throughout load-in.<span class="rt-note flag">Corrected — Polar Black's live ROS lists Moe as their own coordinator. This deck previously listed Moe under Cocoon; worth confirming.</span></td>
+          <td class="rt-owner">Moe (Polar Black)</td>
+        </tr>
+        <tr>
+          <td class="rt-time">8 AM–8 PM</td>
           <td class="rt-track"><span class="track-pill pb">Polar Black</span></td>
           <td class="rt-item">Local crew ×10 on site, 27th floor.</td>
           <td class="rt-owner">RNS NY</td>
@@ -861,6 +878,12 @@
           <td class="rt-owner">JDAV / Emcee</td>
         </tr>
         <tr>
+          <td class="rt-time">10:00 AM</td>
+          <td class="rt-track"><span class="track-pill pb">Polar Black</span></td>
+          <td class="rt-item">Scenic team on site, 26th floor.</td>
+          <td class="rt-owner">Co-Op</td>
+        </tr>
+        <tr>
           <td class="rt-time">10:30 AM</td>
           <td class="rt-track"><span class="track-pill pb">Polar Black</span></td>
           <td class="rt-item">Graphics team on site — install scrolls &amp; vinyls throughout the space.<span class="rt-note flag">Final vinyl placements pending approval — see Open Items.</span></td>
@@ -869,20 +892,20 @@
         <tr>
           <td class="rt-time">11:00 AM</td>
           <td class="rt-track"><span class="track-pill pb">Polar Black</span></td>
-          <td class="rt-item">Scenic team on site; drapes install, 26th &amp; 27th floor.</td>
-          <td class="rt-owner">Co-Op · Pegasus</td>
+          <td class="rt-item">Drapes install, 27th &amp; 26th floor.</td>
+          <td class="rt-owner">Pegasus</td>
         </tr>
         <tr>
           <td class="rt-time">11:30 AM</td>
           <td class="rt-track"><span class="track-pill pb">Polar Black</span></td>
-          <td class="rt-item">Second truck — mannequin delivery, load-in, 27th floor.</td>
+          <td class="rt-item">Second truck — mannequin delivery, load-in, 27th floor.<span class="rt-note flag">Marked "to confirm" on Polar Black's own live schedule.</span></td>
           <td class="rt-owner">Frank Glover</td>
         </tr>
         <tr>
           <td class="rt-time">12:00 PM</td>
           <td class="rt-track"><span class="track-pill pb">Polar Black</span></td>
-          <td class="rt-item">eBay live on site, 27th floor.</td>
-          <td class="rt-owner">eBay Live + Multitrack</td>
+          <td class="rt-item">Inventory delivery, 27th floor.</td>
+          <td class="rt-owner">Matchfire</td>
         </tr>
         <tr>
           <td class="rt-time">12:30 PM</td>
@@ -893,8 +916,8 @@
         <tr>
           <td class="rt-time">1:00 PM</td>
           <td class="rt-track"><span class="track-pill pb">Polar Black</span></td>
-          <td class="rt-item">Inventory delivery, 27th floor.</td>
-          <td class="rt-owner">Matchfire</td>
+          <td class="rt-item">eBay Live — external production on site, 27th floor.</td>
+          <td class="rt-owner">Multi-Track</td>
         </tr>
         <tr>
           <td class="rt-time">2:00 PM</td>
@@ -905,13 +928,25 @@
         <tr>
           <td class="rt-time">3:00 PM</td>
           <td class="rt-track"><span class="track-pill pb">Polar Black</span></td>
-          <td class="rt-item">All mannequins assembled; sound tests underway.</td>
-          <td class="rt-owner">RNS NY · Pegasus</td>
+          <td class="rt-item">All mannequins assembled.</td>
+          <td class="rt-owner">RNS NY</td>
+        </tr>
+        <tr>
+          <td class="rt-time">3:00 PM</td>
+          <td class="rt-track"><span class="track-pill pb">Polar Black</span></td>
+          <td class="rt-item">Sound tests for the DJ.</td>
+          <td class="rt-owner">Pegasus</td>
+        </tr>
+        <tr>
+          <td class="rt-time">3:00 PM</td>
+          <td class="rt-track"><span class="track-pill pb">Polar Black</span></td>
+          <td class="rt-item">Furniture delivery — benches, 26th floor.</td>
+          <td class="rt-owner">Live Load Bench</td>
         </tr>
         <tr>
           <td class="rt-time">3–5 PM</td>
           <td class="rt-track"><span class="track-pill pb">Polar Black</span></td>
-          <td class="rt-item">Distribution of mannequins and looks, 26th &amp; 27th floor.</td>
+          <td class="rt-item">Distribution of mannequins and looks, 26th &amp; 27th floor.<span class="rt-note">5 crew wrap for the day at 3pm.</span></td>
           <td class="rt-owner">RNS NY + Polar Black</td>
         </tr>
         <tr>
@@ -929,8 +964,26 @@
         <tr>
           <td class="rt-time">6:00 PM</td>
           <td class="rt-track"><span class="track-pill pb">Polar Black</span></td>
+          <td class="rt-item">eBay live on site, 27th floor.</td>
+          <td class="rt-owner">eBay Live</td>
+        </tr>
+        <tr>
+          <td class="rt-time">6:00 PM</td>
+          <td class="rt-track"><span class="track-pill pb">Polar Black</span></td>
           <td class="rt-item">Lighting focus commences.</td>
           <td class="rt-owner">Pegasus + Polar Black</td>
+        </tr>
+        <tr>
+          <td class="rt-time">6:00 PM</td>
+          <td class="rt-track"><span class="track-pill pb">Polar Black</span></td>
+          <td class="rt-item">Crew dinner.</td>
+          <td class="rt-owner">Polar Black</td>
+        </tr>
+        <tr>
+          <td class="rt-time">7:00 PM</td>
+          <td class="rt-track"><span class="track-pill pb">Polar Black</span></td>
+          <td class="rt-item">Jenna on site for rehearsals and walkthrough.</td>
+          <td class="rt-owner">Polar Black + eBay</td>
         </tr>
         <tr>
           <td class="rt-time">8:00 PM</td>
@@ -993,26 +1046,32 @@
         <tr>
           <td class="rt-time">10:00 AM</td>
           <td class="rt-track"><span class="track-pill pb">Polar Black</span></td>
+          <td class="rt-item">Rooftop furniture &amp; benches delivered.<span class="rt-note">Existing Cocoon furniture stays in storage per the 9/7 removal.</span></td>
+          <td class="rt-owner">Luxe Rentals</td>
+        </tr>
+        <tr>
+          <td class="rt-time">10:00 AM</td>
+          <td class="rt-track"><span class="track-pill pb">Polar Black</span></td>
+          <td class="rt-item">5 local crew on site to support.</td>
+          <td class="rt-owner">RNS NY</td>
+        </tr>
+        <tr>
+          <td class="rt-time">12:00 PM</td>
+          <td class="rt-track"><span class="track-pill pb">Polar Black</span></td>
           <td class="rt-item">eBay live on site.</td>
           <td class="rt-owner">eBay Live + Multitrack</td>
         </tr>
         <tr>
-          <td class="rt-time">10:00 AM</td>
+          <td class="rt-time">2:00 PM</td>
           <td class="rt-track"><span class="track-pill pb">Polar Black</span></td>
-          <td class="rt-item">Rooftop furniture &amp; benches delivered (Polar Black rental).<span class="rt-note">Existing Cocoon furniture stays in storage per the 9/7 removal.</span></td>
-          <td class="rt-owner">Polar Black rental</td>
-        </tr>
-        <tr>
-          <td class="rt-time">10:00 AM</td>
-          <td class="rt-track"><span class="track-pill pb">Polar Black</span></td>
-          <td class="rt-item">Local crew on site to support.</td>
-          <td class="rt-owner">RNS NY</td>
+          <td class="rt-item">Catering load-in and set-up.<span class="rt-note">Two more deliveries follow — 4:30pm and 5:00pm.</span></td>
+          <td class="rt-owner">Great Performances</td>
         </tr>
         <tr>
           <td class="rt-time">2:00 PM</td>
           <td class="rt-track"><span class="track-pill pb">Polar Black</span></td>
-          <td class="rt-item">Catering load-in and set-up.</td>
-          <td class="rt-owner">Great Performances</td>
+          <td class="rt-item">eBay live on site (second touchpoint).</td>
+          <td class="rt-owner">eBay Live + Multitrack</td>
         </tr>
         <tr class="row-highlight">
           <td class="rt-time">4:00 PM</td>
@@ -1022,27 +1081,33 @@
         </tr>
         <tr>
           <td class="rt-time">4:30 PM</td>
-          <td class="rt-track"><span class="track-pill pb">Polar Black</span></td>
+          <td class="rt-track"><span class="track-pill cocoon">Cocoon</span></td>
           <td class="rt-item">Cleaners on site.</td>
-          <td class="rt-owner">—</td>
+          <td class="rt-owner">Cocoon</td>
         </tr>
         <tr>
           <td class="rt-time">5:00 PM</td>
           <td class="rt-track"><span class="track-pill pb">Polar Black</span></td>
-          <td class="rt-item">Security on site.</td>
+          <td class="rt-item">7 security on site.</td>
           <td class="rt-owner">USPA</td>
-        </tr>
-        <tr>
-          <td class="rt-time">5:30 PM</td>
-          <td class="rt-track"><span class="track-pill pb">Polar Black</span></td>
-          <td class="rt-item">Jenna rehearsal / Heron soundcheck. <span class="flag">Both listed at the same time — confirm intentional vs. conflict, see Open Items.</span></td>
-          <td class="rt-owner">Polar Black</td>
         </tr>
         <tr>
           <td class="rt-time">6:00 PM</td>
           <td class="rt-track"><span class="track-pill pb">Polar Black</span></td>
           <td class="rt-item">Brand ambassadors on site.</td>
           <td class="rt-owner">staffed.com</td>
+        </tr>
+        <tr class="row-highlight">
+          <td class="rt-time">6:00 PM</td>
+          <td class="rt-track"><span class="track-pill pb">Polar Black</span></td>
+          <td class="rt-item">Heron soundcheck, rooftop.<span class="rt-note">Resolved — this and the Jenna rehearsal below were previously both listed at 5:30pm; Polar Black's live ROS now shows them at different times, 30 minutes apart.</span></td>
+          <td class="rt-owner">BPCM</td>
+        </tr>
+        <tr>
+          <td class="rt-time">6:30 PM</td>
+          <td class="rt-track"><span class="track-pill pb">Polar Black</span></td>
+          <td class="rt-item">Jenna rehearsal, 27th &amp; 26th floor.</td>
+          <td class="rt-owner">BPCM</td>
         </tr>
         <tr>
           <td class="rt-time">7:00 PM</td>
@@ -1066,13 +1131,13 @@
           <td class="rt-time">8:00 PM</td>
           <td class="rt-track"><span class="track-pill pb">Polar Black</span></td>
           <td class="rt-item">DJ on site.</td>
-          <td class="rt-owner">Polar Black</td>
+          <td class="rt-owner">BPCM</td>
         </tr>
         <tr class="row-highlight">
           <td class="rt-time">8:30–10:30 PM</td>
           <td class="rt-track"><span class="track-pill pb">Polar Black</span></td>
           <td class="rt-item">DJ set on the rooftop. <span class="flag">Building sign-off on rooftop alcohol/DJ still pending — see Open Items. Liquor permit is already obtained.</span></td>
-          <td class="rt-owner">Polar Black</td>
+          <td class="rt-owner">BPCM + Polar Black</td>
         </tr>
         <tr class="row-highlight">
           <td class="rt-time">10:30 PM</td>
@@ -1087,16 +1152,52 @@
           <td class="rt-owner">JDAV / Emcee</td>
         </tr>
         <tr>
+          <td class="rt-time">10 PM–1 AM</td>
+          <td class="rt-track"><span class="track-pill pb">Polar Black</span></td>
+          <td class="rt-item">3 dressers on site to help with collection packing, 27th floor.</td>
+          <td class="rt-owner">Quick Change Artistry</td>
+        </tr>
+        <tr>
+          <td class="rt-time">10:30 PM</td>
+          <td class="rt-track"><span class="track-pill pb">Polar Black</span></td>
+          <td class="rt-item">Fine-art / scenic collection, 26th floor — wait until clothes are clear.</td>
+          <td class="rt-owner">Allen</td>
+        </tr>
+        <tr>
+          <td class="rt-time">10:30 PM</td>
+          <td class="rt-track"><span class="track-pill pb">Polar Black</span></td>
+          <td class="rt-item">Collection packing, 27th &amp; 26th floor.<span class="rt-note">Vendor tentative on Polar Black's own schedule.</span></td>
+          <td class="rt-owner">Matchfire + Polar Black</td>
+        </tr>
+        <tr>
+          <td class="rt-time">10:30 PM</td>
+          <td class="rt-track"><span class="track-pill pb">Polar Black</span></td>
+          <td class="rt-item">Catering rentals pickup.</td>
+          <td class="rt-owner">Party Rental Ltd</td>
+        </tr>
+        <tr>
           <td class="rt-time">11:00 PM</td>
           <td class="rt-track"><span class="track-pill pb">Polar Black</span></td>
           <td class="rt-item">Security finishes. AV dismantle and collection.</td>
           <td class="rt-owner">USPA · Pegasus</td>
         </tr>
         <tr>
+          <td class="rt-time">11:00 PM</td>
+          <td class="rt-track"><span class="track-pill pb">Polar Black</span></td>
+          <td class="rt-item">Furniture pickup for the rooftop.</td>
+          <td class="rt-owner">Luxe Rentals</td>
+        </tr>
+        <tr>
           <td class="rt-time">11:30 PM</td>
           <td class="rt-track"><span class="track-pill pb">Polar Black</span></td>
           <td class="rt-item">Catering load-out.</td>
           <td class="rt-owner">Great Performances</td>
+        </tr>
+        <tr class="row-highlight">
+          <td class="rt-time">12–1 AM</td>
+          <td class="rt-track"><span class="track-pill pb">Polar Black</span></td>
+          <td class="rt-item">Final collections &amp; technical load-out.<span class="rt-note flag">Mannequin collection (Frank Glover) is still marked TBC on Polar Black's own schedule — see Open Items.</span></td>
+          <td class="rt-owner">Matchfire · Pegasus · Frank Glover</td>
         </tr>
         <tr>
           <td class="rt-time">2:00 AM</td>
@@ -1163,9 +1264,9 @@
           <td class="rt-owner">Floor protection vendor</td>
         </tr>
         <tr class="row-highlight">
-          <td class="rt-time">Morning</td>
+          <td class="rt-time">If needed</td>
           <td class="rt-track"><span class="track-pill cocoon">Cocoon</span></td>
-          <td class="rt-item">Late pickup coordinated for the mannequin vendor.<span class="rt-note flag">~50 boxes / 2 truckloads — exact list &amp; window still pending from Polar Black, see Open Items.</span></td>
+          <td class="rt-item">Any remaining mannequin boxes not cleared overnight. <span class="flag">Polar Black's live schedule now targets a 12–1am collection on Sept 9 (see that page) with Frank Glover still marked TBC there — this Sept 10 slot is the fallback if that collection doesn't happen. Exact list &amp; window still pending, see Open Items.</span></td>
           <td class="rt-owner">Frank Glover</td>
         </tr>
         <tr>
@@ -1241,13 +1342,10 @@
           <div class="p-name-row"><span class="p-name">Leroi</span><a class="p-phone tel-link" href="tel:+13473208230">347-320-8230</a></div>
           <div class="p-role">Casa Manager, Casa Panorama</div>
         </div>
-        <div class="person-row">
-          <div class="p-name-row"><span class="p-name">Moe</span><span class="p-phone tbd">On file — TBD</span></div>
-          <div class="p-role">Lift &amp; delivery coordination, Sep 8</div>
-        </div>
       </div>
       <div class="team-col">
         <div class="team-col-head">Production Vendors</div>
+        <div class="vendor-row"><div><div class="v-name">Moe</div><div class="v-role">Lift &amp; delivery coordination, Sep 8<span class="flag" style="display:block;margin-top:2px;">Polar Black's own live schedule lists Moe as their coordinator, not Cocoon — see Open Items.</span></div></div><span class="v-phone tbd">On file — TBD</span></div>
         <div class="vendor-row"><div><div class="v-name">JDAV / Emcee (Seif Salem, Julio Mundo)</div><div class="v-role">Rooftop AV &amp; sound — Cocoon-coordinated</div></div><a class="v-phone tel-link" href="tel:+19176368852">917-636-8852</a></div>
         <div class="vendor-row"><div><div class="v-name">OTI Fine Art Services (Margaret)</div><div class="v-role">Fine-art handling / moving</div></div><a class="v-phone tel-link" href="tel:+12125181676">212-518-1676</a></div>
         <div class="vendor-row"><div><div class="v-name">RNS NY</div><div class="v-role">Local crew / mannequin build</div></div><span class="v-phone tbd">TBD</span></div>
@@ -1261,6 +1359,12 @@
         <div class="vendor-row"><div><div class="v-name">USPA</div><div class="v-role">Security</div></div><span class="v-phone tbd">TBD</span></div>
         <div class="vendor-row"><div><div class="v-name">staffed.com</div><div class="v-role">Brand ambassadors</div></div><span class="v-phone tbd">TBD</span></div>
         <div class="vendor-row"><div><div class="v-name">eBay Live + Multitrack</div><div class="v-role">Livestream production</div></div><span class="v-phone tbd">TBD</span></div>
+        <div class="vendor-row"><div><div class="v-name">Multi-Track</div><div class="v-role">External eBay Live production, 27th floor</div></div><span class="v-phone tbd">TBD</span></div>
+        <div class="vendor-row"><div><div class="v-name">BPCM</div><div class="v-role">DJ / talent &amp; soundcheck coordination</div></div><span class="v-phone tbd">TBD</span></div>
+        <div class="vendor-row"><div><div class="v-name">Luxe Rentals</div><div class="v-role">Rooftop furniture delivery / pickup</div></div><span class="v-phone tbd">TBD</span></div>
+        <div class="vendor-row"><div><div class="v-name">Live Load Bench</div><div class="v-role">Benches, 26th floor</div></div><span class="v-phone tbd">TBD</span></div>
+        <div class="vendor-row"><div><div class="v-name">Allen</div><div class="v-role">Fine-art / scenic collection, 26th floor</div></div><span class="v-phone tbd">TBD</span></div>
+        <div class="vendor-row"><div><div class="v-name">Party Rental Ltd</div><div class="v-role">Catering rentals pickup</div></div><span class="v-phone tbd">TBD</span></div>
         <div class="vendor-row"><div><div class="v-name">Floor protection (2 vendors quoting)</div><div class="v-role">NY Layout Pros · Ontime Communications Pro</div></div><span class="v-phone tbd">TBD</span></div>
       </div>
     </div>

@@ -52,11 +52,12 @@ else
 fi
 
 echo "→ Enabling GitHub Pages (main branch / root)..."
-gh api \
-  --method POST \
-  -H "Accept: application/vnd.github+json" \
-  "/repos/${ORG}/${REPO_NAME}/pages" \
-  -f source='{"branch":"main","path":"/"}' >/dev/null 2>&1 || true
+gh api -X POST "/repos/${ORG}/${REPO_NAME}/pages" \
+  -f "source[branch]=main" \
+  -f "source[path]=/" >/dev/null 2>&1 || \
+gh api -X PUT "/repos/${ORG}/${REPO_NAME}/pages" \
+  -f "source[branch]=main" \
+  -f "source[path]=/" >/dev/null 2>&1 || true
 
 echo ""
 echo "✓ Done! Live in ~60 seconds at:"
